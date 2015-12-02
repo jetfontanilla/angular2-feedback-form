@@ -1,5 +1,6 @@
 # angular2-feedback-form
-a simple ratings/feedback form created in Angular 2
+a simple and responsive design ratings/feedback form created in Angular 2 and Bootstrap
+![alt text](https://raw.githubusercontent.com/jetlogs/angular2-feedback-form/master/sample-preview.jpg "sample preview")
 
 ## Requirements
 * [git or any git client](https://git-scm.com/downloads)
