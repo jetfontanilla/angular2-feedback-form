@@ -1,0 +1,233 @@
+.unrated-teacher {
+    font-size: 0.9em;
+    margin-bottom: 2em;
+    background-color: #fff;
+    border-radius: 0.5em;
+    padding: 0.8em;
+    line-height: 1.6;
+}
+
+.feedback-modal {
+    font-size: 10px;
+}
+
+.feedback-form {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 500px;
+}
+
+.feedback-form .row {
+    padding: 0.7em;
+}
+
+.feedback-form h2 {
+    display: inline-block;
+    font-size: 1.8em;
+    color: #333;
+    background: #fafafa;
+    padding: 0 .5em;
+    line-height: 1.4;
+}
+
+.summary {
+    background: #fff;
+    color: #999;
+}
+
+.feedback-form .row.summary {
+    margin: 0;
+    padding: 0;
+}
+
+.summary h2 {
+    background: #fff;
+    color: #999;
+    display: table-cell;
+    vertical-align: middle;
+    height: 6em;
+    font-size: 1.4em;
+    padding: 0;
+}
+
+.summary-title {
+    padding-top: 2em;
+}
+
+.feedback-modal .summary-title {
+    padding-top: 0;
+}
+
+.feedback {
+    background: #fafafa;
+    color: #999
+}
+
+.star-container {
+    margin-top: 1em;
+    text-align: center;
+}
+
+.unrated-teacher .star-container {
+    margin: 0;
+}
+
+.feedback-form .star-container {
+    margin: 1em 0;
+}
+
+.star {
+    display: inline-block;
+    width: 3em;
+    height: 3em;
+    padding: 0 2em;
+    background: url(/src/app/images/star-on.png) scroll no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.unrated-teacher .star {
+    width: 1.5em;
+    height: 1.5em;
+    padding: 0 1.3em;
+}
+
+.feedback-form .star {
+    width: 3em;
+    height: 3em;
+    padding: 0 2em;
+}
+
+.star-1 {
+    background-image: url(/src/app/images/star-on-1.png);
+}
+
+.star-2 {
+    background-image: url(/src/app/images/star-on-2.png);
+}
+
+.star-3 {
+    background-image: url(/src/app/images/star-on-3.png);
+}
+
+.star-4 {
+    background-image: url(/src/app/images/star-on-4.png);
+}
+
+.star-5 {
+    background-image: url(/src/app/images/star-on-5.png);
+}
+
+.star.off {
+    background: url(/src/app/images/star-off.png) scroll no-repeat center center;
+    background-size: contain;
+}
+
+.profile-photo {
+    width: 8em;
+    height: auto;
+    max-width: 100%;
+    border: 1px #999 solid;
+    margin: 1em;
+}
+
+.feedback textarea {
+    padding: 1em;
+    font-size: 1.2em;
+}
+
+.feedback-form textarea {
+    width: 80%
+}
+
+.feedback-submit {
+    background: #9BCD4A;
+    width: 65%;
+    padding: 0.8em;
+    color: #fff;
+    font-size: 1.5em;
+    border-radius: 0.5em;
+    font-weight: bold;
+}
+
+.warn {
+    color: #933;
+    font-size: 1.2em;
+}
+
+.star-notice {
+    font-size: 1.2em;
+}
+
+.reason {
+    display: inline-block;
+    color: #fff;
+    border-radius: .5em;
+    margin: 0.5em;
+    width: 40%;
+    height: 3em;
+    line-height: 3em;
+    background: #ccc none no-repeat center .5em;
+    background-size: 2em;
+    cursor: pointer;
+    font-size: 1.2em;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.feedback-form .reason {
+    margin: 0.2em;
+}
+
+.reason.selected {
+    background-color: #9BCD4A;
+}
+
+.comment-instruction {
+    font-size: 0.6em;
+    line-height: 1em;
+    color: #999;
+}
+
+.favorite-heart {
+    display: inline-block;
+    cursor: pointer;
+    width: 100%;
+    min-width: 3em;
+    height: auto;
+    background: url(/src/app/images/favorite-off.png) scroll no-repeat center center;
+    background-size: contain;
+}
+
+.favorite-heart.on {
+    background-image: url(/src/app/images/favorite-on.png);
+}
+
+@media screen and (min-width: 600px) {
+    .summary h2 {
+        font-size: 1.6em;
+    }
+
+    .feedback-form {
+        border: 1px #000 solid;
+        margin: 3em auto;
+    }
+
+    .feedback-close {
+        margin-top: 1em;
+    }
+
+    .feedback-modal .feedback-form {
+        margin: 1em auto 3em;
+    }
+
+    .reason:hover {
+        background-color: #eee;
+        color: #000;
+    }
+
+    .reason.selected:hover {
+        background-color: #9BCD4A;
+        color: #fff;
+    }
+}

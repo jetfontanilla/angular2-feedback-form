@@ -1,0 +1,82 @@
+<div>
+    <div class="container-fluid feedback-form">
+
+
+        <div class="row summary">
+
+
+            <div class="col-xs-9 summary-title">
+                How was your experience with [Provider] on<br/>
+                [Date]?
+            </div>
+            <div class="col-xs-3 summary-title">
+                <img class=profile-photo src="/src/app/images/default.jpg" />
+            </div>
+
+
+        </div>
+        <div class="row feedback">
+            <div class="col-xs-12 strike">
+                <h2>Rate your experience</h2>
+            </div>
+
+            <div class="col-xs-12 star-container">
+                <div
+                        *ng-for="#n of stars"
+                        class="star"
+                        (click)="clickStar(n)"
+                        [ng-class]="starClass(n)"
+                        (mouseover)="hoverStar(n)"
+                        (mouseout)="hoverStar(0)"
+                >
+                </div>
+            </div>
+
+            <div class="col-xs-12 star-notice" *ng-if="rating.stars > 0">
+                You gave a rating of {{rating.stars}} stars<span *ng-if="isGoodRating()">!</span>
+            </div>
+
+        </div>
+
+        <div class="row feedback" *ng-if="showReasons">
+            <div class="col-xs-12 strike">
+                <h2>What was the reason for this rating?</h2>
+            </div>
+
+            <div class="col-xs-12 warn" *ng-if="warnRequiredReason">Please select a reason</div>
+            <div class="col-xs-12 reasons">
+                <div
+                        class="feedback-button reason"
+                        *ng-for="#reason of reasons"
+                        (click)="rating.reasonId = reason.id"
+                        [ng-class]="{selected: rating.reasonId == reason.id}"
+                >
+                    {{reason.text}}
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="row feedback" *ng-if="showFeedback">
+            <div class="col-xs-12 strike">
+                <h2>Comments</h2>
+            </div>
+
+            <div class="col-xs-12 warn" *ng-if="warnRequiredFeedback">Please enter your comment for the selected reason</div>
+            <div class="col-xs-12">
+            <textarea cols="30" rows="2" placeholder="Please enter your comments" name="feedback"
+                      [(ng-model)]="rating.comment"></textarea>
+            </div>
+
+        </div>
+
+        <div class="row feedback" *ng-if="showSubmitButton()">
+            <div class="col-xs-12">
+                <input class="feedback-submit" value="Submit Feedback" type="submit" (click)="submitFeedback()"/>
+            </div>
+
+        </div>
+    </div>
+</div>
